@@ -1,0 +1,43 @@
+spring:
+#  profiles:
+#    active: @spring.profiles.active@
+
+  jpa:
+    hibernate:
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+      ddl-auto: update
+      show-sql: true
+  servlet.multipart.max-file-size: 50MB
+
+app:
+  datasource:
+    jdbc-url: jdbc:mysql://localhost:3306/bethel
+    username: root
+    password: passes
+    pool-size: 30
+
+application:
+  jwt:
+    secretKey: securesecuresecuresecuresecuresecuresecuresecuresecuresecuresecure
+    tokenPrefix: Bearer
+    tokenExpirationAfterDays: 10
+
+paytm:
+  mobile: 9920534530
+  email: fpsz.95@gmail.com
+  payment:
+    sandbox:
+      merchantId: CGdjWI85481997714720
+      merchantKey:  Rj3#Te&0JR@%oofh
+      channelId:  WEB
+      website: WEBSTAGING
+      industryTypeId: Retail
+      paytmUrl: https://securegw-stage.paytm.in/order/process
+      callbackUrl:  http://localhost:3000/payment/payment-details-response
+      details:
+        MID:  ${paytm.payment.sandbox.merchantid}
+        CHANNEL_ID: ${paytm.payment.sandbox.channelid}
+        INDUSTRY_TYPE_ID: ${paytm.payment.sandbox.industrytypeid}
+        WEBSITE:  ${paytm.payment.sandbox.website}
+        CALLBACK_URL: ${paytm.payment.sandbox.callbackUrl}
+

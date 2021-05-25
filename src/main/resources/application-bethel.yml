@@ -1,0 +1,30 @@
+spring:
+#  profiles:
+#    active: @spring.profiles.active@
+
+  jpa:
+    hibernate:
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+      ddl-auto: update
+      show-sql: true
+  servlet.multipart.max-file-size: 50MB
+
+server:
+  port: 5000
+
+app:
+  datasource:
+    jdbc-url: jdbc:mysql://betheldb2.c5rax06hnffd.ap-south-1.rds.amazonaws.com:3306/ferntechbethel
+    username: ferntech
+    password: PPedro1995
+    pool-size: 30
+
+application:
+   jwt:
+      secretKey: securesecuresecuresecuresecuresecuresecuresecuresecuresecuresecure
+      tokenPrefix: Bearer
+      tokenExpirationAfterDays: 10
+
+
+
+
