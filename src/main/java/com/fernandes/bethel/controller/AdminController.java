@@ -44,6 +44,7 @@ public class AdminController {
     @GetMapping("/profile")
     public ResponseEntity<?> getCurrentUserDetails(Authentication authentication){
         System.out.println("Inside Profile - ADMIN");
+        System.out.println("Hello Worldddddddddddddddddddddddddddddddddddddd");
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
         Set<String> roles = userDetails.getAuthorities().stream()
                 .map(item -> item.getAuthority())
