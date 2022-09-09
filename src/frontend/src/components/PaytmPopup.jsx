@@ -105,17 +105,24 @@ function PaytmPopup() {
     console.log(invoiceDetail && invoiceDetail.data.orderId);
     console.log(paytmTokenRes && paytmTokenRes.body.txnToken);
     console.log(invoiceDetail && invoiceDetail.data.totalCharges);
+
+    const orderId = invoiceDetail && invoiceDetail.data.orderId;
+    const paytmTxnToken = paytmTokenRes && paytmTokenRes.body.txnToken;
+    const amt = invoiceDetail && invoiceDetail.data.totalCharges;
     const config = {
       root: "",
       flow: "DEFAULT",
       data: {
-        orderId: "1",
+        //"1",
+        orderId: orderId,
         //invoiceDetail && invoiceDetail.data.orderId /* update order id */,
         //"550a07a0f05148e6b1b2b5e94e26f9111621866567575",
-        token: "14e78e556290473ebee93435f9a25a601621873318428",
+        token: paytmTxnToken,
+        //"14e78e556290473ebee93435f9a25a601621873318428",
         // paytmTokenRes && paytmTokenRes.body.txnToken /* update token value */,
         tokenType: "TXN_TOKEN",
-        amount: "1",
+        amount: amt,
+        //"1",
         //invoiceDetail && invoiceDetail.data.totalCharges /* update amount */,
       },
 
