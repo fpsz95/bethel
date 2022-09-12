@@ -1,6 +1,6 @@
 spring:
-#  profiles:
-#    active: @spring.profiles.active@
+  profiles:
+    active: @spring.profiles.active@
 
   jpa:
     hibernate:
@@ -14,9 +14,9 @@ server:
 
 app:
   datasource:
-    jdbc-url: jdbc:mysql://betheldb2.c5rax06hnffd.ap-south-1.rds.amazonaws.com:3306/ferntechbethel
-    username: ferntech
-    password: PPedro1995
+    jdbc-url: jdbc:mysql://fpsz-db-server.c93ujvlm4zo7.ap-south-1.rds.amazonaws.com:3306/bethel
+    username: root
+    password: root1234
     pool-size: 30
 
 application:

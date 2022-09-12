@@ -1,6 +1,6 @@
 spring:
-#  profiles:
-#    active: @spring.profiles.active@
+  profiles:
+    active: @spring.profiles.active@
 
   jpa:
     hibernate:
@@ -13,7 +13,7 @@ app:
   datasource:
     jdbc-url: jdbc:mysql://localhost:3306/bethel
     username: root
-    password: passes
+    password: root
     pool-size: 30
 
 application:

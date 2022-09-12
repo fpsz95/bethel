@@ -45,4 +45,10 @@ public class ProfilePictureController {
         System.out.println(authentication);
         return userDetailsServiceImpl.downloadUserProfileImage(id, authentication);
     }
+
+    @GetMapping("tester")
+    public String tester(){
+        System.out.println("tester");
+        return "Test Successful";
+    }
 }

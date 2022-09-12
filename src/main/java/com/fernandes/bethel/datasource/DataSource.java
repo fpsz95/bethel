@@ -14,6 +14,7 @@ public class DataSource {
     public HikariDataSource hikariDataSource() {
         return DataSourceBuilder.create()
                 .type(HikariDataSource.class)
+                .driverClassName("com.mysql.cj.jdbc.Driver")
                 .build();
     }
 }
