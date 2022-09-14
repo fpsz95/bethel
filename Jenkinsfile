@@ -14,7 +14,6 @@ pipeline{
 
 				echo 'build stage'
 				echo "PATH is: ${env.PATH}"
-				clean install
 
 			}
 
