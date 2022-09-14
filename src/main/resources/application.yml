@@ -1,6 +1,14 @@
+server:
+  port: 5000
+  servlet:
+    context-path: /bethel
+
 spring:
-  profiles:
-    active: @spring.profiles.active@
+  mvc:
+    view:
+      prefix: /hello
+  #  profiles:
+  #    active: @spring.profiles.active@
 
   jpa:
     hibernate:
