@@ -4,11 +4,8 @@ pipeline{
 
 	tools{
         maven 'Maven'
+        jdk 'jdk 11'
 	}
-
-	environment{
-        PATH = "C:\\Program Files\\Java\\jdk-11.0.16.1\\bin;C:\\Program Files\\apache-maven-3.6.3\\bin;C:\\Windows\\System32;C:\\Program Files\\Amazon\\AWSCLIV2\\";
-    }
 
 	stages {
 		stage("build"){
