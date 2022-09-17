@@ -12,7 +12,7 @@ pipeline{
 			steps{
 				echo 'build stage'
 				echo "PATH is: ${env.PATH}"
-				bat "mvn install"
+				sh "mvn install"
 			}
 		}
 
