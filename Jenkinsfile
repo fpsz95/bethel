@@ -8,6 +8,12 @@ pipeline{
 	}
 
 	stages {
+		stage("test"){
+			steps{
+    			echo 'test stage'
+			}
+		}
+		
 		stage("build"){
 			steps{
 				echo 'build stage'
@@ -15,16 +21,11 @@ pipeline{
 				sh "mvn install"
 			}
 		}
-
-		stage("test"){
-			steps{
-    			echo 'test stage'
-			}
-		}
-
+		
 		stage("deploy"){
 			steps{
 				echo 'deploy stage'
+				cp /root/.jenkins/workspace/bethel_master/target/bethel-0.0.1.3-SNAPSHOT.war /apache-tomcat-9.0.65/webapps/
 			}
 		}
 
